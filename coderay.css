@@ -1,0 +1,100 @@
+/*
+  Default color.
+  In .clj files this matches var names, ex. the 'v' in (def v 3) .
+*/
+.cm-s-coderay { background-color: #f2f2f2; color: black }
+
+/*
+  In .css files this selector matches property value names like LightGrey, GreenYellow...
+*/
+.cm-s-coderay span.cm-variable-2 { color: #088; }
+
+.cm-s-coderay span.cm-string { background-color: hsla(0,100%,50%,0.05); color: #D20; }
+
+/*
+  In .css files this matches property value names like block, auto, relative, right, nowrap... 
+*/
+.cm-s-coderay span.cm-string-2 { color: #088; }
+.cm-s-coderay span.cm-number { color: #00D; }
+.cm-s-coderay span.cm-bracket { color: black; }
+
+/*
+  In .clj files this matches functions/macros like not, nil?, merge...
+*/
+.cm-s-coderay span.cm-builtin { color: #080; font-weight: bold; }
+
+/*
+  In .html files this matches attribute names like href, class, placeholder...
+  In .css files this matches property names like color, height, width... 
+*/
+.cm-s-coderay span.cm-property, .cm-s-coderay span.cm-attribute { color: #b48; }
+
+/*
+  In .clj files this matches Clojure functions/macros like defn, def, let...
+*/
+.cm-s-coderay span.cm-keyword { color: #080; font-weight: bold; }
+
+/*
+  In .css file this matches class names like .class-name)
+*/
+.cm-s-coderay span.cm-qualifier { color: #B06; font-weight: bold; }
+
+.cm-s-coderay span.cm-comment { color: #777; }
+
+/* 
+  In .css files this matches directives like @media.
+  In .js files this matches function parameters.
+  The original CodeRay Alpha theme uses different colors for matchings in
+  .css and .js, but as it doesn't seem to be a way to make that distinction
+  in CodeMirror the color used by CodeRay for .js function params will be
+  used for directives in .css too.
+*/
+.cm-s-coderay span.cm-def { color: black; }
+
+/* 
+  In .html files this matches the <!DOCTYPE html> declaration.
+*/
+.cm-s-coderay span.cm-meta { color: #34b; }
+
+/*
+  In .clj files this matches Clojure keywords like :a, :bb...
+*/
+.cm-s-coderay span.cm-atom { color: #A60; }
+
+/*
+  In .html files this matches tags, like body, code...
+  In .css files this matches HTML tags when used as selectors, ex. body, code...
+  CodeRay displays the matched token differently depending on if it's in a
+  .html or a .css file, but because it seems there's no way to distinguish
+  that in CodeMirror/LightTable, here the HTML style will be used for CSS
+  too.
+ */
+.cm-s-coderay span.cm-tag { color: #070; }
+
+.cm-s-coderay span.CodeMirror-searching { background: #aaa; color: black; }
+.cm-s-coderay span.CodeMirror-searching-active { background: #afa; color: black; }
+
+.cm-s-coderay .CodeMirror-selected { background: #bfd4ff; }
+.cm-s-coderay .CodeMirror-focused .CodeMirror-selected { background: #444; }
+
+.cm-s-coderay span.cm-SUBST { color: #FF1F69; }
+
+/*
+ 2nd level brackets (parens, square or curly brackets)
+ (1st level being the outermost ones)
+ (replace the '2' with another number to match brackets nested at that level)
+*/
+.cm-s-coderay span.cm-bracket2 { color: black; }
+
+.cm-s-coderay span.CodeMirror-matchingbracket { box-sizing: border-box; background: transparent; border-bottom: 1px solid black; }
+.cm-s-coderay span.CodeMirror-nonmatchingbracket { color: #F33; border-bottom: 1px solid #F33; background: none; }
+
+.cm-s-coderay .cm-searching { background: #5f5f5f; border-radius: 2px; color: #eee !important; }
+.cm-s-coderay .searching-current { background: #13879C; color: #BFFCFF !important; }
+
+.CodeMirror div.CodeMirror-cursor { border-left: 1px solid black; }
+/* Shown when moving in bi-directional text */
+.CodeMirror div.CodeMirror-secondarycursor { border-left: 1px solid red; }
+.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor { width: auto; border: none !important; background: rgba(0, 200, 200, .4); }
+
+.CodeMirror-gutters { background: #202020; border-right: 1px solid #444; }
