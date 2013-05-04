@@ -7,3 +7,4 @@ This theme works better with Light Table's light skin. You can use the
 
 The theme provides sensible syntax highlighting for Clojure/ClojureScript, HTML, CSS, and JavaScript. It has not been checked with Python source code.
 
+<img src="https://raw.github.com/xavi/coderay-lighttable-theme/master/screenshot.png">
