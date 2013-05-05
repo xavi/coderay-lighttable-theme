@@ -12,7 +12,7 @@
 .cm-s-coderay span.cm-string { background-color: hsla(0,100%,50%,0.05); color: #D20; }
 
 /*
-  In .css files this matches property value names like block, auto, relative, right, nowrap... 
+  In .css files this matches property value names like block, auto, relative, right, nowrap...
 */
 .cm-s-coderay span.cm-string-2 { color: #088; }
 .cm-s-coderay span.cm-number { color: #00D; }
@@ -25,7 +25,7 @@
 
 /*
   In .html files this matches attribute names like href, class, placeholder...
-  In .css files this matches property names like color, height, width... 
+  In .css files this matches property names like color, height, width...
 */
 .cm-s-coderay span.cm-property, .cm-s-coderay span.cm-attribute { color: #b48; }
 
@@ -41,7 +41,7 @@
 
 .cm-s-coderay span.cm-comment { color: #777; }
 
-/* 
+/*
   In .css files this matches directives like @media.
   In .js files this matches function parameters.
   The original CodeRay Alpha theme uses different colors for matchings in
@@ -51,7 +51,7 @@
 */
 .cm-s-coderay span.cm-def { color: black; }
 
-/* 
+/*
   In .html files this matches the <!DOCTYPE html> declaration.
 */
 .cm-s-coderay span.cm-meta { color: #34b; }
