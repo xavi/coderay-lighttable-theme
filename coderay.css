@@ -1,8 +1,8 @@
-/*
-  Default color.
-  In .clj files this matches var names, ex. the 'v' in (def v 3) .
-*/
-.cm-s-coderay { background-color: #f2f2f2; color: black }
+#multi.theme-coderay .content { background: #f2f2f2; }
+/* tab colors */
+/* #multi.theme-coderay .list .active, #multi.theme-coderay .list li:hover { background: #BFD4FF; color: #213BfF; } */
+#multi.theme-coderay .list .active, #multi.theme-coderay .list li:hover { background: #f2f2f2; color: #213BfF; }
+#multi.theme-coderay .list .dirty { color:#0080FF; }
 
 /*
   In .css files this selector matches property value names like LightGrey, GreenYellow...
@@ -10,37 +10,31 @@
 .cm-s-coderay span.cm-variable-2 { color: #088; }
 
 .cm-s-coderay span.cm-string { background-color: hsla(0,100%,50%,0.05); color: #D20; }
-
 /*
   In .css files this matches property value names like block, auto, relative, right, nowrap...
 */
 .cm-s-coderay span.cm-string-2 { color: #088; }
 .cm-s-coderay span.cm-number { color: #00D; }
 .cm-s-coderay span.cm-bracket { color: black; }
-
 /*
   In .clj files this matches functions/macros like not, nil?, merge...
 */
 .cm-s-coderay span.cm-builtin { color: #080; font-weight: bold; }
-
 /*
   In .html files this matches attribute names like href, class, placeholder...
   In .css files this matches property names like color, height, width...
 */
-.cm-s-coderay span.cm-property, .cm-s-coderay span.cm-attribute { color: #b48; }
-
+.cm-s-coderay span.cm-property { color: #b48; }
+.cm-s-coderay span.cm-attribute { color: #b48; }
 /*
   In .clj files this matches Clojure functions/macros like defn, def, let...
 */
 .cm-s-coderay span.cm-keyword { color: #080; font-weight: bold; }
-
 /*
   In .css file this matches class names like .class-name)
 */
 .cm-s-coderay span.cm-qualifier { color: #B06; font-weight: bold; }
-
 .cm-s-coderay span.cm-comment { color: #777; }
-
 /*
   In .css files this matches directives like @media.
   In .js files this matches function parameters.
@@ -50,7 +44,6 @@
   used for directives in .css too.
 */
 .cm-s-coderay span.cm-def { color: black; }
-
 /*
   In .html files this matches the <!DOCTYPE html> declaration.
 */
@@ -60,7 +53,6 @@
   In .clj files this matches Clojure keywords like :a, :bb...
 */
 .cm-s-coderay span.cm-atom { color: #A60; }
-
 /*
   In .html files this matches tags, like body, code...
   In .css files this matches HTML tags when used as selectors, ex. body, code...
@@ -71,30 +63,41 @@
  */
 .cm-s-coderay span.cm-tag { color: #070; }
 
-.cm-s-coderay span.CodeMirror-searching { background: #aaa; color: black; }
-.cm-s-coderay span.CodeMirror-searching-active { background: #afa; color: black; }
+.cm-s-coderay div.CodeMirror-cursor { border-left: 4px solid rgb(0,174,255); }
+.cm-s-coderay .CodeMirror-activeline-background {background: #e8f2ff !important;}
+.cm-s-coderay .CodeMirror-matchingbracket {outline:1px solid grey;color:black !important;background:yellow;}
 
-.cm-s-coderay .CodeMirror-selected { background: #bfd4ff; }
-.cm-s-coderay .CodeMirror-focused .CodeMirror-selected { background: #444; }
+/* https://groups.google.com/d/msg/light-table-discussion/LXKixpzNmZM/bOPo_9ls4wIJ */
+.cm-s-coderay .cm-searching { background: yellow; border-radius:0px; color: black !important; }
+.cm-s-coderay .searching-current { background: orange; color: black !important; }
+/*
+  The next 2 rules are necessary for the matches contained in strings, which
+  are displayed with its own background color, to be highlighted with the same
+  background color as matches (guess the default rules don't work because
+  they are not specific enough
+*/
+.cm-s-coderay span.cm-string.cm-searching { background: yellow; border-radius:0px; color: black !important; }
+.cm-s-coderay span.cm-string.searching-current  { background: orange; color: black !important; }
 
-.cm-s-coderay span.cm-SUBST { color: #FF1F69; }
 
 /*
- 2nd level brackets (parens, square or curly brackets)
- (1st level being the outermost ones)
- (replace the '2' with another number to match brackets nested at that level)
+  https://github.com/LightTable/Rainbow/blob/master/colors.css
+  Rainbow colors for light themes from
+  https://raw2.github.com/jlr/rainbow-delimiters/master/rainbow-delimiters.el
 */
-.cm-s-coderay span.cm-bracket2 { color: black; }
+/* Unmatched delimiter */
+.cm-s-coderay span.cm-rainbow.cm-bracket {color: red;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket1 {color: #707183;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket2 {color: #7388d6;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket3 {color: #909183;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket4 {color: #709870;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket5 {color: #907373;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket6 {color: #6276ba;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket7 {color: #858580;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket8 {color: #80a880;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket9 {color: #887070;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket10 {color: #887070;}  /* from here, same color as before */
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket11 {color: #887070;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket12 {color: #887070;}
+.cm-s-coderay span.cm-rainbow.cm-bracket.cm-bracket13 {color: #887070;}  /* 1 more level than in the default theme */
 
-.cm-s-coderay span.CodeMirror-matchingbracket { box-sizing: border-box; background: transparent; border-bottom: 1px solid black; }
-.cm-s-coderay span.CodeMirror-nonmatchingbracket { color: #F33; border-bottom: 1px solid #F33; background: none; }
-
-.cm-s-coderay .cm-searching { background: #5f5f5f; border-radius: 2px; color: #eee !important; }
-.cm-s-coderay .searching-current { background: #13879C; color: #BFFCFF !important; }
-
-.CodeMirror div.CodeMirror-cursor { border-left: 1px solid black; }
-/* Shown when moving in bi-directional text */
-.CodeMirror div.CodeMirror-secondarycursor { border-left: 1px solid red; }
-.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor { width: auto; border: none !important; background: rgba(0, 200, 200, .4); }
-
-.CodeMirror-gutters { background: #202020; border-right: 1px solid #444; }
